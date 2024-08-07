@@ -3,7 +3,7 @@ import { faker } from '@faker-js/faker';
 
 describe('Funcionalidade: Cadastro', () => {
     beforeEach(() => {
-        cy.visit('http://lojaebac.ebaconline.art.br/minha-conta/')
+        cy.visit('minha-conta')
     });
 
     it('Deve completar o cadastro com sucesso', () => {
@@ -45,4 +45,10 @@ describe('Funcionalidade: Cadastro', () => {
 
         cy.get('.woocommerce-message').should('contain' , 'modificados com sucesso.')
     });
+
+    it.only('Deve completar o cadastro com sucesso - Usando comando customizado', () => {
+        cy.preCadastro(faker.internet.email(), 'teste@123', faker.person.firstName(), faker.person.lastName())
+        cy.get('.woocommerce-message').should('contain' , 'modificados com sucesso.')
+    });
+
 });
