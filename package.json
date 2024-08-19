@@ -4,7 +4,8 @@
   "description": "Testes de UI feito durante o curso de Engenheiro de qualidade de software",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx cypress run --browser chrome",
+    "cy:dash": "npx cypress run --record --key 7df4af5a-90f6-498d-bce7-f12d753a0f78"
   },
   "keywords": [],
   "author": "",
