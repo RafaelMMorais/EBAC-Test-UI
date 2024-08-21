@@ -8,7 +8,7 @@ pipeline {
                 bat 'npm install'
             }
         }
-        stage('Test') {
+        stage('Teste') {
             steps {
                bat '''set NO_COLOR=1
                 npm test'''
